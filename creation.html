@@ -14,8 +14,6 @@
 <body class="bg">
 
     <!-- Nav supérieure -->
-
-
     <header>
         <div class="row justify-content-between">
             <img src="./public/img/banner.webp" alt="Bannière Pokémmon" class="w-100" />
@@ -30,7 +28,6 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Logo de Pokémon Retour à l'accueil">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
@@ -42,14 +39,12 @@
                         </ul>
 
                         <div class="input-group col">
-
                             <input type="search" class="form-control" placeholder="rechercher" aria-label="Effectuer une recherche" aria-describedby="champ-recherche">
                             <button class="btn btn-outline-warning" type="submit" id="champ-recherche">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                               </svg>
-                        </button>
-
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -57,7 +52,6 @@
         </div>
 
         <!-- Breadcrumbs -->
-
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Création</li>
@@ -65,14 +59,11 @@
                 <li class="breadcrumb-item"><a href="defaut.html">Par défaut</a></li>
             </ol>
         </nav>
-
     </header>
-
 
     <main class="row p-5">
 
         <!-- Nav à gauche -->
-
         <div class="col lg-2">
             <nav class="nav flex-column">
                 <a class="nav-link active" aria-current="page" href="creation.html">Création</a>
@@ -82,13 +73,13 @@
         </div>
 
         <!-- Formulaire Création -->
-
         <div class="container col-lg-10">
             <form method="POST" action="https://philippefleury.com/backend.php">
                 <div class="row mt-3">
+
+                    <!-- Field Apparence -->
                     <fieldset class="col-lg-4 row">
                         <h1>Choix de l'apparence</h2>
-
                             <figure class="col-6 ">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" aria-labelledby="nidoran">
@@ -122,6 +113,8 @@
                                 <figcaption>Snorlax details</figcaption>
                             </figure>
                     </fieldset>
+
+                    <!-- Field Apparence -->
                     <fieldset class="col-lg-8">
                         <h1>Caractéristiques</h2>
                             <div class="mb-3">
@@ -148,8 +141,9 @@
                                 <label for="color-choice" class="form-label">Couleur étendard:</label>
                                 <input name="color-choice" type="color" class="form-control form-control-color" id="color-choice" value="#563d7c" title="Choix couleur">
                             </div>
-                            <div class="stats-range mt-4">
 
+                            <!-- Curseurs STATS -->
+                            <div class="stats-range mt-4">
                                 <label for="stats-range" class="form-label">Statistiques:</label>
                                 <div class="form-group mb-4">
                                     <div>
@@ -178,25 +172,23 @@
                                         <input name="health-range" type="range" class="form-range" min="1" max="5" step="1" id="my_range5" aria-labelledby="santé">
                                     </div>
                                 </div>
-
                             </div>
+
+                            <!-- Boutons -->
                             <div class="row justify-content-center mb-3 ">
                                 <button type="button " class="btn btn-success btn-sm col-3 mx-2 " aria-label="reinitialiser formulaire ">Réinitialiser</button>
                                 <button type="button " class="btn btn-success btn-sm col-3 mx-2 " aria-label="créer personnage aléatoire ">Créer aléatoirement</button>
                             </div>
                             <div class="d-grid gap-2 col-5 mx-auto">
                                 <button class="btn btn-warning" type="submit" aria-label="valider">Valider</button>
-
                             </div>
                     </fieldset>
-
                 </div>
             </form>
         </div>
     </main>
 
     <footer>
-
     </footer>
 
     <script>
