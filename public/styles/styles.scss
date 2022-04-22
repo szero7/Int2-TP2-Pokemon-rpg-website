@@ -1,0 +1,35 @@
+$warning: rgb(255, 209, 42);
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+body {
+    background-image: url("../img/bgsky1500.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.brush {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 255, 255), rgba(255, 0, 0, 0));
+}
+
+td {
+    text-align: center;
+}
+
+tr {
+    font-weight: bold;
+    &:nth-child(even) {
+        background-color: $warning;
+    }
+    &:nth-child(odd) {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+// @extend imbrication a ajouter

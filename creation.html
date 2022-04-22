@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Accueil - Pokémon</title>
+</head>
+
+<body class="bg">
+
+    <!-- Nav supérieure -->
+
+
+    <header>
+        <div class="row justify-content-between">
+            <img src="./public/img/banner.webp" alt="Bannière Pokémmon" class="w-100" />
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="col-3 ms-2">
+                    <a class="navbar-brand" href="accueil.html">
+                        <img src="./public/img/logo.png" alt="Logo du site" />
+                    </a>
+                </div>
+
+                <div class="col-5 ms-auto me-2">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Logo de Pokémon Retour à l'accueil">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link col" href="#">Connexion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link col" href="#">Partager</a>
+                            </li>
+                        </ul>
+
+                        <div class="input-group col">
+
+                            <input type="search" class="form-control" placeholder="rechercher" aria-label="Effectuer une recherche" aria-describedby="champ-recherche">
+                            <button class="btn btn-outline-warning" type="submit" id="champ-recherche">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                              </svg>
+                        </button>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Breadcrumbs -->
+
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Création</li>
+                <li class="breadcrumb-item"><a href="personnages.html">Personnages</a></li>
+                <li class="breadcrumb-item"><a href="defaut.html">Par défaut</a></li>
+            </ol>
+        </nav>
+
+    </header>
+
+
+    <main class="row p-5">
+
+        <!-- Nav à gauche -->
+
+        <div class="col lg-2">
+            <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="creation.html">Création</a>
+                <a class="nav-link" href="personnages.html">Personnages</a>
+                <a class="nav-link" href="defaut.html">Par défaut</a>
+            </nav>
+        </div>
+
+        <!-- Formulaire Création -->
+
+        <div class="container col-lg-10">
+            <form method="POST" action="https://philippefleury.com/backend.php">
+                <div class="row mt-3">
+                    <fieldset class="col-lg-4 row">
+                        <h1>Choix de l'apparence</h2>
+
+                            <figure class="col-6 ">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" aria-labelledby="nidoran">
+                                    <label id="nidoran" class="form-check-label" for="flexRadio1">Nidoran</label>
+                                </div>
+                                <img src="./public/IMG/pokemon1.png" alt="photo-pokémon_1">
+                                <figcaption>Nidoran details</figcaption>
+                            </figure>
+                            <figure class="col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" aria-labelledby="turtwig">
+                                    <label id="turtwig" class="form-check-label" for="flexRadio2">Turtwig</label>
+                                </div>
+                                <img src="./public/IMG/pokemon2.png" alt="photo-pokémon_2">
+                                <figcaption>Turtwig details</figcaption>
+                            </figure>
+                            <figure class="col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio3" aria-labelledby="cubone">
+                                    <label id="cubone" class="form-check-label" for="flexRadio3">Cubone</label>
+                                </div>
+                                <img src="./public/IMG/pokemon3.png" alt="photo-pokémon_3">
+                                <figcaption>Cubone details</figcaption>
+                            </figure>
+                            <figure class="col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio4" aria-labelledby="snorlax">
+                                    <label id="snorlax" class="form-check-label" for="flexRadio4">Snorlax</label>
+                                </div>
+                                <img src="./public/IMG/pokemon4.png" alt="photo-pokémon_4">
+                                <figcaption>Snorlax details</figcaption>
+                            </figure>
+                    </fieldset>
+                    <fieldset class="col-lg-8">
+                        <h1>Caractéristiques</h2>
+                            <div class="mb-3">
+                                <label for="character-name" class="form-label">Nom:</label>
+                                <input name="character-name" type="text" class="form-control" id="name-input" placeholder="Entrez le nom du personnage" aria-label="name">
+                            </div>
+                            <div class="data mt-3">
+                                <div class="mb-3">
+                                    <label for="import_data" class="form-label">Charger données du personnage:</label>
+                                    <input name="import-data" class="form-control form-control-sm" id="import_data" type="file">
+                                </div>
+                            </div>
+                            <div class="spec_abilities-select mt-3">
+                                <label for="spec_abilities" class="form-label">Pouvoir spécial:</label>
+                                <input name="spec_abilities" class="form-control" list="spec_abilities-choices" id="spec_abilities" placeholder="Cliquez pour choisir élément">
+                                <datalist id="spec_abilities-choices">
+                            <option value="feu">
+                            <option value="glace">
+                            <option value="terre">
+                            <option value="aléatoire">
+                        </datalist>
+                            </div>
+                            <div class="color-select mt-3">
+                                <label for="color-choice" class="form-label">Couleur étendard:</label>
+                                <input name="color-choice" type="color" class="form-control form-control-color" id="color-choice" value="#563d7c" title="Choix couleur">
+                            </div>
+                            <div class="stats-range mt-4">
+
+                                <label for="stats-range" class="form-label">Statistiques:</label>
+                                <div class="form-group mb-4">
+                                    <div>
+                                        <i class="fa-solid fa-hand-fist"></i>
+                                        <label id="attaque" for="attack-range" class="form-label">Attaque [<span id="range_value1"></span>]</label>
+                                        <input name="attack-range" type="range" class="form-range" min="1" max="5" step="1" id="my_range1" aria-labelledby="attaque">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        <label id="défense" for="defense-range" class="form-label">Défense [<span id="range_value2"></span>]</label>
+                                        <input name="defense-range" type="range" class="form-range" min="1" max="5" step="1" id="my_range2" aria-labelledby="défense">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-person-running "></i>
+                                        <label id="vitesse" for="speed-range" class="form-label">Vitesse [<span id="range_value3"></span>]</label>
+                                        <input name="speed-range" type="range" class="form-range" min="1" max="5" step="1" id="my_range3" aria-labelledby="vitesse">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-wand-sparkles "></i>
+                                        <label id="magie" for="magic-range" class="form-label">Magie [<span id="range_value4"></span>]</label>
+                                        <input name="magic-range" type="range" class="form-range" min="1" max="5" step="1" id="my_range4" aria-labelledby="magie">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-heart "></i>
+                                        <label id="santé" for="health-range" class="form-label">Santé [<span id="range_value5"></span>]</label>
+                                        <input name="health-range" type="range" class="form-range" min="1" max="5" step="1" id="my_range5" aria-labelledby="santé">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row justify-content-center mb-3 ">
+                                <button type="button " class="btn btn-success btn-sm col-3 mx-2 " aria-label="reinitialiser formulaire ">Réinitialiser</button>
+                                <button type="button " class="btn btn-success btn-sm col-3 mx-2 " aria-label="créer personnage aléatoire ">Créer aléatoirement</button>
+                            </div>
+                            <div class="d-grid gap-2 col-5 mx-auto">
+                                <button class="btn btn-warning" type="submit" aria-label="valider">Valider</button>
+
+                            </div>
+                    </fieldset>
+
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        let range1 = document.getElementById("my_range1");
+        let points1 = document.getElementById("range_value1");
+        points1.innerHTML = range1.value;
+        range1.oninput = function() {
+            points1.innerHTML = this.value;
+        }
+        let range2 = document.getElementById("my_range2");
+        let points2 = document.getElementById("range_value2");
+        points2.innerHTML = range1.value;
+        range2.oninput = function() {
+            points2.innerHTML = this.value;
+        }
+        let range3 = document.getElementById("my_range3");
+        let points3 = document.getElementById("range_value3");
+        points3.innerHTML = range3.value;
+        range3.oninput = function() {
+            points3.innerHTML = this.value;
+        }
+        let range4 = document.getElementById("my_range4");
+        let points4 = document.getElementById("range_value4");
+        points4.innerHTML = range4.value;
+        range4.oninput = function() {
+            points4.innerHTML = this.value;
+        }
+        let range5 = document.getElementById("my_range5");
+        let points5 = document.getElementById("range_value5");
+        points5.innerHTML = range5.value;
+        range5.oninput = function() {
+            points5.innerHTML = this.value;
+        }
+    </script>
+
+</body>
+
+</html>
