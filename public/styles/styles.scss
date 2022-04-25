@@ -1,9 +1,17 @@
+$bg-light: #0000;
+$text-primary: #0000;
 $warning: rgb(255, 209, 42);
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+$mauve: #573c61;
 body {
-    background-image: url("../img/bgsky1500.jpg");
+    background-image: url(../img/bgsky1500.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#titre {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
 }
 
 .justify {
@@ -12,6 +20,11 @@ body {
 
 .brush {
     background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 255, 255), rgba(255, 0, 0, 0));
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: $light;
 }
 
 td {
@@ -30,6 +43,43 @@ tr {
 
 h1 {
     font-size: 2rem;
+}
+
+figcaption {
+    color: $light;
+    background-color: $dark;
+    width: 150px;
+}
+
+.anim {
+    animation: cssAnimation 500ms forwards;
+    @keyframes cssAnimation {
+        0% {
+            scale: 0.5;
+        }
+        100% {
+            scale: 1;
+        }
+    }
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+.brush {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 255, 255), rgba(255, 0, 0, 0));
+}
+
+a {
+    color: $mauve;
+    text-decoration: none;
+    &:hover:not(:first-of-type) {
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 255, 255), rgba(255, 0, 0, 0));
+        padding: 5px;
+        color: $mauve;
+        font-weight: bold;
+    }
 }
 
 // @extend imbrication a ajouter

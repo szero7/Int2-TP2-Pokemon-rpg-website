@@ -16,41 +16,65 @@
 
     <!-- Nav supérieure -->
     <header>
-        <div class="row justify-content-between">
-            <img src="./public/img/banner.webp" alt="Bannière Pokémmon" class="w-100" />
-            <nav class="navbar navbar-expand-sm navbar-light bg-light">
-                <div class="col-3 ms-2">
-                    <a class="navbar-brand" href="accueil.html">
-                        <img src="./public/img/logo.png" alt="Logo du site" />
-                    </a>
-                </div>
+        <!-- <div class="row justify-content-between"> -->
+        <img src="./public/img/banner.webp" alt="Bannière Pokémmon" class="w-100" />
 
-                <div class="col-5 ms-auto me-2">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Logo de Pokémon Retour à l'accueil">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link col" href="#">Connexion</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link col" href="#">Partager</a>
-                            </li>
-                        </ul>
 
-                        <div class="input-group col">
-                            <input type="search" class="form-control" placeholder="rechercher" aria-label="Effectuer une recherche" aria-describedby="champ-recherche">
-                            <button class="btn btn-outline-info" type="submit" id="champ-recherche">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                              </svg>
-                            </button>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="col-3 ms-2">
+                <a class="navbar-brand" href="accueil.html">
+                    <img src="./public/img/logo_reduced.png" alt="Logo du site" />
+                </a>
+            </div>
+
+            <div class="col-4 ms-auto me-2 justify-content-end">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Logo de Pokémon Retour à l'accueil">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link col" href="#">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link col" href="#">Partager</a>
+                        </li>
+                    </ul>
+
+                    <div class="input-group col">
+                        <input type="search" class="form-control" placeholder="rechercher" aria-label="Effectuer une recherche" aria-describedby="champ-recherche">
+                        <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#Modal" id="champ-recherche">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                  </svg>
+                                </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Liens</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <a href="https://www.pokecommunity.com/" class="d-block">Pokecommunity</a>
+                                        <a href="https://www.serebii.net/" class="d-block">Serebii</a>
+                                        <a href="https://www.pokebeach.com/" class="d-block">Pokebeach</a>
+                                        <a href="https://marriland.com/" class="d-block">Marriland</a>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+            </div>
+        </nav>
+        <!-- </div> -->
 
         <!-- Breadcrumbs -->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -62,27 +86,27 @@
         </nav>
     </header>
 
-    <main class="row p-5">
+    <main class="row">
 
         <!-- Nav à gauche -->
-        <div class="col lg-2">
-            <nav class="nav flex-column">
-                <a class="nav-link" href="creation.html">Création</a>
-                <a class="nav-link" href="personnages.html">Personnages</a>
-                <a class="nav-link active" aria-current="page" href="defaut.html">Par défaut</a>
+        <div class="col-lg-2 bg-light">
+            <nav class="nav flex-column w-100">
+                <a class="text-decoration-none p-3" href="creation.html">Création</a>
+                <a class="text-decoration-none p-3" href="personnages.html">Personnages</a>
+                <a class="text-decoration-none active p-3 w-100" aria-current="page" href="defaut.html">Par défaut</a>
             </nav>
         </div>
 
         <!-- Cartes personnages -->
-        <div class="container col-lg-10 ">
-            <div class="m-auto w-50 md-8 ">
-                <div class="alert alert-warning " role="alert ">
+        <div class="container col-lg-10 p-5">
+            <div class="m-auto w-50 md-8">
+                <div class="alert alert-warning " role="alert">
                     Ceci est le personnage par défaut
                 </div><br>
                 <table class="table table-hover ">
                     <tbody>
                         <tr>
-                            <th class="text-center " colspan="2 ">Personnage crée par défaut</th>
+                            <th class="text-center " colspan="2">Personnage crée par défaut</th>
                         </tr>
                         <tr>
                             <th>Caractéristiques</th>
@@ -124,7 +148,19 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="row bg-light font-small mx-auto my-auto">
+        <div class="col-sm-3 text-start my-auto">
+            <a href="mailto:krgro001@edu.cegepgarneau.ca" class="text-decoration-none">Contactez-nous</a>
+        </div>
+        <blockquote class="blockquote text-center col-sm-6 my-auto">
+            <p class="mb-3">Je comprends maintenant que se ne sont pas les circonstances de la naissance qui importent, mais c'est ce que l'ont fait du don de la vie qui détermine qui l'on est.</p>
+            <footer class="blockquote-footer "><cite title="Source Title" class="font-weight-bold">Mewtwo</cite></footer>
+        </blockquote>
+        <div class="col-sm-3 text-end my-auto">
+            <a href="#" class="nav-link disabled">Conditions d'utilisation
+                <br>
+                © 2022 Pokémon</a>
+        </div>
     </footer>
 
 </body>
