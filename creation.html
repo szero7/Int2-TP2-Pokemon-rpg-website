@@ -14,18 +14,21 @@
 
 <body class="bg">
 
+    <a class="visually-hidden-focusable" href="#main-content" id="float">Aller au contenu principal</a>
+
+    <!-- Nav supérieure -->
 
     <header>
 
         <img src="./public/img/banner.webp" alt="Bannière Pokémmon" class="w-100" />
         <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="col-3 ms-2">
+            <div class="ms-2">
                 <a class="navbar-brand" href="accueil.html">
                     <img src="./public/img/logo_reduced.png" alt="Logo du site" />
                 </a>
             </div>
 
-            <div class="col-4 ms-auto me-2 justify-content-end">
+            <div class="ms-auto me-2 justify-content-end">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Logo de Pokémon Retour à l'accueil">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -41,7 +44,7 @@
 
                     <div class="input-group col">
                         <input type="search" class="form-control" placeholder="rechercher" aria-label="Effectuer une recherche" aria-describedby="champ-recherche">
-                        <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#Modal" id="champ-recherche">
+                        <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#Modal" id="champ-recherche" aria-label="recherche">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                                   </svg>
@@ -70,198 +73,197 @@
                     </div>
                 </div>
             </div>
-            </div>
-        </nav>
-        <!-- </div> -->
-
-        <!-- Breadcrumbs -->
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Création</li>
-                <li class="breadcrumb-item"><a href="personnages.html">Personnages</a></li>
-                <li class="breadcrumb-item"><a href="defaut.html">Par défaut</a></li>
-            </ol>
         </nav>
     </header>
 
     <main class="row">
 
         <!-- Nav à gauche -->
-        <div class="col-lg-2 bg-light">
+        <div class="col-md-2 bg-light p-4">
             <nav class="nav flex-column w-100">
-                <a class="text-decoration-none active p-3 w-100" class="nav-link disabled" aria-current="page" href="#">Création</a>
-                <a class="text-decoration-none p-3" href="personnages.html">Personnages</a>
-                <a class="text-decoration-none p-3" href="defaut.html">Par défaut</a>
+                <a class="navlink active w-100" aria-current="page" href="creation.html">Création</a>
+                <a class="navlink" href="personnages.html">Personnages</a>
+                <a class="navlink" href="defaut.html">Par défaut</a>
             </nav>
         </div>
 
-        <!-- Formulaire Création -->
-        <div class="container col-lg-10 p-5">
+        <div class="container col-md-10 p-5">
+
+            <!-- Breadcrumbs -->
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-5">
+                    <li class="breadcrumb-item font-weight-bold" aria-current="page" href="creation.html">Création</li>
+                    <li class="breadcrumb-item"><a href="personnages.html">Personnages</a></li>
+                    <li class="breadcrumb-item"><a href="defaut.html">Par défaut</a></li>
+                </ol>
+            </nav>
+
+            <!-- Formulaire Création -->
             <form method="POST" action="https://philippefleury.com/backend.php">
                 <div class="row mt-3">
 
-                    <!-- Field Apparence -->
-                    <fieldset class="col-lg-5 mx-auto row">
-                        <h1>Choix de l'apparence</h2>
-                            <figure class="figure col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" aria-labelledby="nidoran">
-                                    <label id="nidoran" class="form-check-label" for="flexRadio1">Nidoran</label>
-                                </div>
-                                <img src="./public/IMG/pokemon1.png" class="figure-img img-fluid rounded" alt="photo-nidoran">
-                                <figcaption>Poison</figcaption>
-                            </figure>
-                            <figure class="figure col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" aria-labelledby="turtwig">
-                                    <label id="turtwig" class="form-check-label" for="flexRadio2">Turtwig</label>
-                                </div>
-                                <img src="./public/IMG/pokemon2.png" class="figure-img img-fluid rounded" alt="photo-turtwig">
-                                <figcaption>Minifeuille</figcaption>
-                            </figure>
-                            <figure class="figure col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio3" aria-labelledby="cubone">
-                                    <label id="cubone" class="form-check-label" for="flexRadio3">Cubone</label>
-                                </div>
-                                <img src="./public/IMG/pokemon3.png" class="figure-img img-fluid rounded" alt="photo-cubone">
-                                <figcaption>Solitaire</figcaption>
-                            </figure>
-                            <figure class="figure col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio4" aria-labelledby="snorlax">
-                                    <label id="snorlax" class="form-check-label" for="flexRadio4">Snorlax</label>
-                                </div>
-                                <img src="./public/IMG/pokemon4.png" class="figure-img img-fluid rounded" alt="photo-snorlax">
-                                <figcaption>Normal</figcaption>
-                            </figure>
+                    <!-- champ Apparence -->
+                    <fieldset class="col-lg-5 mx-auto row" id="main-content">
+                        <h1>Choix de l'apparence</h1>
+                        <figure class="figure col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" aria-labelledby="nidoran">
+                                <label id="nidoran" class="form-check-label" for="flexRadio1">Nidoran</label>
+                            </div>
+                            <img src="./public/IMG/pokemon1.png" class="figure-img img-fluid rounded" alt="photo-nidoran">
+                            <figcaption>Poison</figcaption>
+                        </figure>
+                        <figure class="figure col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" aria-labelledby="turtwig">
+                                <label id="turtwig" class="form-check-label" for="flexRadio2">Turtwig</label>
+                            </div>
+                            <img src="./public/IMG/pokemon2.png" class="figure-img img-fluid rounded" alt="photo-turtwig">
+                            <figcaption>Minifeuille</figcaption>
+                        </figure>
+                        <figure class="figure col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio3" aria-labelledby="cubone">
+                                <label id="cubone" class="form-check-label" for="flexRadio3">Cubone</label>
+                            </div>
+                            <img src="./public/IMG/pokemon3.png" class="figure-img img-fluid rounded" alt="photo-cubone">
+                            <figcaption>Solitaire</figcaption>
+                        </figure>
+                        <figure class="figure col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio4" aria-labelledby="snorlax">
+                                <label id="snorlax" class="form-check-label" for="flexRadio4">Snorlax</label>
+                            </div>
+                            <img src="./public/IMG/pokemon4.png" class="figure-img img-fluid rounded" alt="photo-snorlax">
+                            <figcaption>Normal</figcaption>
+                        </figure>
                     </fieldset>
 
-                    <!-- Field Caracteristiques -->
+                    <!-- champ Caracteristiques -->
                     <fieldset class="col-lg-7">
-                        <h1>Caractéristiques</h2>
+                        <h1>Caractéristiques</h1>
+                        <div class="mb-3">
+                            <label for="nom-perso" class="form-label">Nom:</label>
+                            <input name="nom-perso" type="text" class="form-control" id="nom-perso" placeholder="Entrez le nom du personnage" aria-label="name">
+                        </div>
+                        <div class="data mt-3">
                             <div class="mb-3">
-                                <label for="nom-perso" class="form-label">Nom:</label>
-                                <input name="nom-perso" type="text" class="form-control" id="nom-perso" placeholder="Entrez le nom du personnage" aria-label="name">
+                                <label for="import-fichier" class="form-label">Charger données du personnage:</label>
+                                <input name="import-fichier" class="form-control form-control-sm" id="import-fichier" type="file">
                             </div>
-                            <div class="data mt-3">
-                                <div class="mb-3">
-                                    <label for="import-fichier" class="form-label">Charger données du personnage:</label>
-                                    <input name="import-fichier" class="form-control form-control-sm" id="import-fichier" type="file">
-                                </div>
-                            </div>
-                            <div class="pouvoir-select mt-3">
-                                <label for="pouvoir" class="form-label">Pouvoir spécial:</label>
-                                <input name="pouvoir" class="form-control" list="pouvoir-choix" id="pouvoir" placeholder="Cliquez pour choisir élément">
-                                <datalist id="pouvoir-choix">
+                        </div>
+                        <div class="pouvoir-select mt-3">
+                            <label for="pouvoir" class="form-label">Pouvoir spécial:</label>
+                            <input name="pouvoir" class="form-control" list="pouvoir-choix" id="pouvoir" placeholder="Cliquez pour choisir élément">
+                            <datalist id="pouvoir-choix">
                             <option value="feu">
                             <option value="glace">
                             <option value="terre">
                             <option value="aléatoire">
                         </datalist>
-                                <span class="help-block">Taper ou sélectionner le nom de l'élément</span>
-                            </div>
-                            <div class="coleur-select mt-3">
-                                <label for="couleur-choix" class="form-label">Couleur de l'étendard:</label>
-                                <input name="couleur-choix" type="color" class="form-control form-control-color" id="couleur-choix" value="#563d7c" title="Choix couleur">
-                            </div>
+                            <span class="help-block">Taper ou sélectionner l'élément</span>
+                        </div>
+                        <div class="coleur-select mt-3">
+                            <label for="couleur-choix" class="form-label">Couleur de l'étendard:</label>
+                            <input name="couleur-choix" type="color" class="form-control form-control-color" id="couleur-choix" value="#563d7c" title="Choix couleur">
+                        </div>
 
-                            <!-- Curseurs STATS -->
-                            <div class="stats-range mt-4">
-                                <label for="stats-range" class="form-label">Statistiques:</label>
-                                <div class="form-group mb-4">
-                                    <div>
-                                        <i class="fa-solid fa-hand-fist"></i>
-                                        <label id="attaque" for="champ-attaque" class="form-label">Attaque [<span id="range_value1"></span>]</label>
-                                        <input name="champ-attaque" type="range" class="form-range" min="1" max="5" step="1" id="my_range1" aria-labelledby="attaque">
-                                    </div>
-                                    <div>
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <label id="défense" for="champ-defense" class="form-label">Défense [<span id="range_value2"></span>]</label>
-                                        <input name="champ-defense" type="range" class="form-range" min="1" max="5" step="1" id="my_range2" aria-labelledby="défense">
-                                    </div>
-                                    <div>
-                                        <i class="fa-solid fa-person-running "></i>
-                                        <label id="vitesse" for="champ-vitesse" class="form-label">Vitesse [<span id="range_value3"></span>]</label>
-                                        <input name="champ-vitesse" type="range" class="form-range" min="1" max="5" step="1" id="my_range3" aria-labelledby="vitesse">
-                                    </div>
-                                    <div>
-                                        <i class="fa-solid fa-wand-sparkles "></i>
-                                        <label id="magie" for="champ-magie" class="form-label">Magie [<span id="range_value4"></span>]</label>
-                                        <input name="champ-magie" type="range" class="form-range" min="1" max="5" step="1" id="my_range4" aria-labelledby="magie">
-                                    </div>
-                                    <div>
-                                        <i class="fa-solid fa-heart "></i>
-                                        <label id="santé" for="champ-sante" class="form-label">Santé [<span id="range_value5"></span>]</label>
-                                        <input name="champ-sante" type="range" class="form-range" min="1" max="5" step="1" id="my_range5" aria-labelledby="santé">
-                                    </div>
+                        <!-- Curseurs STATS -->
+                        <div class="stats-range mt-4">
+                            <div class="form-group mb-4">
+                                <div>
+                                    <i class="fa-solid fa-hand-fist"></i>
+                                    <label id="attaque" for="champ-attaque" class="form-label">Attaque [<span id="range_value1"></span>]</label>
+                                    <input name="champ-attaque" type="range" class="form-range" min="1" max="5" step="1" id="my_range1" aria-labelledby="attaque">
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <label id="défense" for="champ-defense" class="form-label">Défense [<span id="range_value2"></span>]</label>
+                                    <input name="champ-defense" type="range" class="form-range" min="1" max="5" step="1" id="my_range2" aria-labelledby="défense">
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-person-running "></i>
+                                    <label id="vitesse" for="champ-vitesse" class="form-label">Vitesse [<span id="range_value3"></span>]</label>
+                                    <input name="champ-vitesse" type="range" class="form-range" min="1" max="5" step="1" id="my_range3" aria-labelledby="vitesse">
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-wand-sparkles "></i>
+                                    <label id="magie" for="champ-magie" class="form-label">Magie [<span id="range_value4"></span>]</label>
+                                    <input name="champ-magie" type="range" class="form-range" min="1" max="5" step="1" id="my_range4" aria-labelledby="magie">
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-heart "></i>
+                                    <label id="santé" for="champ-sante" class="form-label">Santé [<span id="range_value5"></span>]</label>
+                                    <input name="champ-sante" type="range" class="form-range" min="1" max="5" step="1" id="my_range5" aria-labelledby="santé">
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Boutons -->
-                            <div class="row mb-3 justify-content-center">
-                                <button type="reset" class="btn btn-danger btn-sm col-3" aria-label="reinitialiser formulaire ">Réinitialiser</button>
-                                <button type="submit" class="btn btn-warning btn-sm col-3 mx-1" aria-label="reinitialiser formulaire ">Valider</button>
-                                <button type="button" class="btn btn-light btn-sm col-3" aria-label="créer personnage aléatoire ">
+                        <!-- Boutons -->
+                        <div class="row mb-3 justify-content-center">
+                            <button type="reset" class="btn btn-danger btn-sm col-3" aria-label="reinitialiser formulaire ">Réinitialiser</button>
+                            <button type="submit" class="btn btn-info btn-sm col-3 mx-1" aria-label="valider formulaire ">Valider</button>
+                            <button type="button" class="btn btn-light btn-sm col-3" aria-label="créer personnage aléatoire ">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-3" viewBox="0 0 16 16">
                                         <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>
                                         <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-4-4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                                       </svg>
                                 </button>
-                            </div>
+                        </div>
                     </fieldset>
                 </div>
             </form>
         </div>
+
+        <script>
+            let range1 = document.getElementById("my_range1");
+            let points1 = document.getElementById("range_value1");
+            points1.innerHTML = range1.value;
+            range1.oninput = function() {
+                points1.innerHTML = this.value;
+            }
+            let range2 = document.getElementById("my_range2");
+            let points2 = document.getElementById("range_value2");
+            points2.innerHTML = range1.value;
+            range2.oninput = function() {
+                points2.innerHTML = this.value;
+            }
+            let range3 = document.getElementById("my_range3");
+            let points3 = document.getElementById("range_value3");
+            points3.innerHTML = range3.value;
+            range3.oninput = function() {
+                points3.innerHTML = this.value;
+            }
+            let range4 = document.getElementById("my_range4");
+            let points4 = document.getElementById("range_value4");
+            points4.innerHTML = range4.value;
+            range4.oninput = function() {
+                points4.innerHTML = this.value;
+            }
+            let range5 = document.getElementById("my_range5");
+            let points5 = document.getElementById("range_value5");
+            points5.innerHTML = range5.value;
+            range5.oninput = function() {
+                points5.innerHTML = this.value;
+            }
+        </script>
+
     </main>
 
-    <footer class="row bg-light font-small mx-auto my-auto">
-        <div class="col-sm-3 text-start my-auto">
-            <a href="mailto:krgro001@edu.cegepgarneau.ca" class="text-decoration-none">Contactez-nous</a>
+    <footer class="row bg-light mx-auto my-auto">
+        <div class=" col-md-4 text-start mt-auto">
+            <a href="#" class="nav-link disabled">Contactez-nous</a>
         </div>
-        <blockquote class="blockquote text-center col-sm-6 my-auto">
+        <blockquote class="blockquote text-center col-md-4 my-3">
             <p class="mb-3">Je comprends maintenant que se ne sont pas les circonstances de la naissance qui importent, mais c'est ce que l'ont fait du don de la vie qui détermine qui l'on est.</p>
-            <footer class="blockquote-footer "><cite title="Source Title" class="font-weight-bold">Mewtwo</cite></footer>
+            <footer class="blockquote-footer "><a href="#" class="nav-link disabled"><cite title="Source Title" class="font-weight-bold">Mewtwo</cite></a></footer>
         </blockquote>
-        <div class="col-sm-3 text-end my-auto">
+        <div class=" col-md-4 text-end mt-auto">
             <a href="#" class="nav-link disabled">Conditions d'utilisation
                 <br>
                 © 2022 Pokémon</a>
         </div>
     </footer>
-
-    <script>
-        let range1 = document.getElementById("my_range1");
-        let points1 = document.getElementById("range_value1");
-        points1.innerHTML = range1.value;
-        range1.oninput = function() {
-            points1.innerHTML = this.value;
-        }
-        let range2 = document.getElementById("my_range2");
-        let points2 = document.getElementById("range_value2");
-        points2.innerHTML = range1.value;
-        range2.oninput = function() {
-            points2.innerHTML = this.value;
-        }
-        let range3 = document.getElementById("my_range3");
-        let points3 = document.getElementById("range_value3");
-        points3.innerHTML = range3.value;
-        range3.oninput = function() {
-            points3.innerHTML = this.value;
-        }
-        let range4 = document.getElementById("my_range4");
-        let points4 = document.getElementById("range_value4");
-        points4.innerHTML = range4.value;
-        range4.oninput = function() {
-            points4.innerHTML = this.value;
-        }
-        let range5 = document.getElementById("my_range5");
-        let points5 = document.getElementById("range_value5");
-        points5.innerHTML = range5.value;
-        range5.oninput = function() {
-            points5.innerHTML = this.value;
-        }
-    </script>
 
 </body>
 

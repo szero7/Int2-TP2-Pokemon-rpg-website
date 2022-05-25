@@ -14,20 +14,21 @@
 
 <body class="bg">
 
+    <a class="visually-hidden-focusable" href="#main-content" id="float">Aller au contenu principal</a>
+
     <!-- Nav supérieure -->
+
     <header>
-        <!-- <div class="row justify-content-between"> -->
+
         <img src="./public/img/banner.webp" alt="Bannière Pokémmon" class="w-100" />
-
-
         <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="col-3 ms-2">
+            <div class="ms-2">
                 <a class="navbar-brand" href="accueil.html">
                     <img src="./public/img/logo_reduced.png" alt="Logo du site" />
                 </a>
             </div>
 
-            <div class="col-4 ms-auto me-2 justify-content-end">
+            <div class="ms-auto me-2 justify-content-end">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Logo de Pokémon Retour à l'accueil">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -43,7 +44,7 @@
 
                     <div class="input-group col">
                         <input type="search" class="form-control" placeholder="rechercher" aria-label="Effectuer une recherche" aria-describedby="champ-recherche">
-                        <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#Modal" id="champ-recherche">
+                        <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#Modal" id="champ-recherche" aria-label="recherche">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                               </svg>
@@ -72,33 +73,32 @@
                     </div>
                 </div>
             </div>
-            </div>
-        </nav>
-        <!-- </div> -->
-
-        <!-- Breadcrumbs -->
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="creation.html">Création</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Personnages</li>
-                <li class="breadcrumb-item"><a href="defaut.html">Par défaut</a></li>
-            </ol>
         </nav>
     </header>
 
     <main class="row">
 
         <!-- Nav à gauche -->
-        <div class="col-lg-2 bg-light">
+        <div class="col-md-2 bg-light p-4">
             <nav class="nav flex-column w-100">
-                <a class="text-decoration-none p-3" href="creation.html">Création</a>
-                <a class="text-decoration-none active p-3 w-100" aria-current="page" href="personnages.html">Personnages</a>
-                <a class="text-decoration-none p-3" href="defaut.html">Par défaut</a>
+                <a class="navlink" href="creation.html">Création</a>
+                <a class="navlink active w-100" aria-current="page" href="personnages.html">Personnages</a>
+                <a class="navlink" href="defaut.html">Par défaut</a>
             </nav>
         </div>
 
-        <!-- Cartes personnages -->
-        <div class="container col-lg-10 p-5">
+        <div class="container col-md-10 p-5" id="main-content">
+
+            <!-- Breadcrumbs -->
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-5">
+                    <li class="breadcrumb-item"><a href="creation.html">Création</a></li>
+                    <li class="breadcrumb-item font-weight-bold" aria-current="page" href="personnages.html">Personnages</li>
+                    <li class="breadcrumb-item"><a href="defaut.html">Par défaut</a></li>
+                </ol>
+            </nav>
+
+            <!-- Cartes personnages -->
             <div class="row row-cols-1 row-cols-lg-5 row-cols-md-3 justify-content-center">
                 <div class="col mx-3">
                     <div class="card h-100 anim" style="width: 16rem;">
@@ -107,19 +107,19 @@
                             <h5 class="card-title">Nidoran</h5>
                             <p class="card-text">Nidoran est un Pokémon de type Poison de la première génération.</p>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 33%">Attaque</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 33%">Attaque</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Défense</div>
+                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Défense</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Vitesse</div>
+                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Vitesse</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Magie</div>
+                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Magie</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 16%">Santé</div>
+                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 16%">Santé</div>
                             </div>
                             <div class="text-center mt-3">
                                 <a href="https://www.pokepedia.fr/Nidoran%E2%99%82" class="btn btn-warning stretched-link">Plus d'infos</a>
@@ -134,19 +134,19 @@
                             <h5 class="card-title">Turtwig</h5>
                             <p class="card-text">Turtwig est un Pokémon de type Plante de la quatrième génération.</p>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 50%">Force</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 50%">Force</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 33%">Défense</div>
+                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 33%">Défense</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Vitesse</div>
+                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Vitesse</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Magie</div>
+                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Magie</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 33%">Santé</div>
+                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 33%">Santé</div>
                             </div>
                             <div class="text-center mt-3">
                                 <a href="https://www.pokepedia.fr/Tortipouss" class="btn btn-warning stretched-link">Plus d'infos</a>
@@ -161,19 +161,19 @@
                             <h5 class="card-title">Cubone</h5>
                             <p class="card-text">Cubone est un Pokémon de type Sol de la première génération.</p>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Force</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Force</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Défense</div>
+                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Défense</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 50%">Vitesse</div>
+                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 50%">Vitesse</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 16%">Magie</div>
+                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 16%">Magie</div>
                             </div><br>
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Santé</div>
+                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 60%">Santé</div>
                             </div>
                             <div class="text-center mt-3">
                                 <a href="https://www.pokepedia.fr/Osselait" class="btn btn-warning stretched-link">Plus d'infos</a>
@@ -188,19 +188,19 @@
                             <h5 class="card-title ">Snorlax</h5>
                             <p class="card-text ">Snorlax est un Pokémon de type Normal introduit dans la Génération I.</p>
                             <div class="progress ">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Force</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 75%">Force</div>
                             </div><br>
                             <div class="progress ">
-                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Défense</div>
+                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 100%">Défense</div>
                             </div><br>
                             <div class="progress ">
-                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 33%">Vitesse</div>
+                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 33%">Vitesse</div>
                             </div><br>
                             <div class="progress ">
-                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 33%">Magie</div>
+                                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 33%">Magie</div>
                             </div><br>
                             <div class="progress ">
-                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 50%">Santé</div>
+                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" aria-label="niveau" style="width: 50%">Santé</div>
                             </div>
                             <div class="text-center mt-3">
                                 <a href="https://bulbapedia.bulbagarden.net/wiki/Snorlax_(Pok%C3%A9mon)" class="btn btn-warning stretched-link">Plus d'infos</a>
@@ -212,16 +212,16 @@
         </div>
     </main>
 
-    <footer class="row bg-light font-small mx-auto my-auto ">
-        <div class="col-sm-3 text-start my-auto ">
-            <a href="mailto:krgro001@edu.cegepgarneau.ca " class="text-decoration-none ">Contactez-nous</a>
+    <footer class="row bg-light mx-auto my-auto">
+        <div class=" col-md-4 text-start mt-auto">
+            <a href="#" class="nav-link disabled">Contactez-nous</a>
         </div>
-        <blockquote class="blockquote text-center col-sm-6 my-auto ">
-            <p class="mb-3 ">Je comprends maintenant que se ne sont pas les circonstances de la naissance qui importent, mais c'est ce que l'ont fait du don de la vie qui détermine qui l'on est.</p>
-            <footer class="blockquote-footer "><cite title="Source Title " class="font-weight-bold ">Mewtwo</cite></footer>
+        <blockquote class="blockquote text-center col-md-4 my-3">
+            <p class="mb-3">Je comprends maintenant que se ne sont pas les circonstances de la naissance qui importent, mais c'est ce que l'ont fait du don de la vie qui détermine qui l'on est.</p>
+            <footer class="blockquote-footer "><a href="#" class="nav-link disabled"><cite title="Source Title" class="font-weight-bold">Mewtwo</cite></a></footer>
         </blockquote>
-        <div class="col-sm-3 text-end my-auto ">
-            <a href="# " class="nav-link disabled ">Conditions d'utilisation
+        <div class=" col-md-4 text-end mt-auto">
+            <a href="#" class="nav-link disabled">Conditions d'utilisation
                 <br>
                 © 2022 Pokémon</a>
         </div>
